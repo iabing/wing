@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title><?php echo $title; ?></title>
+<title>组装电脑</title>
 <?php load_template('inc/cdn'); ?>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title><?php echo $title; ?></title>
+<title>视频监控</title>
 <?php load_template('inc/cdn'); ?>
 </head>
 <body>

@@ -1,8 +1,10 @@
 <?php
 class Go extends Control {
+
   function _() {
     echo 'go func';
   }
+
   function __($_) {
     switch ($_) {
       case '1':
@@ -17,4 +19,5 @@ class Go extends Control {
         redirect('/');
     }
   }
+
 }
