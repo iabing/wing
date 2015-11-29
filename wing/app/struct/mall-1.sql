@@ -1,0 +1,6 @@
+CREATE TABLE `mall` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `conf` CHAR(100) NOT NULL,
+  `value` CHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+)

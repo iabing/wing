@@ -1,0 +1,14 @@
+# dir
+/.idea
+/node_modules
+
+# dir
+/local
+/static
+/wing/app/cache
+/wing/app/template
+/wing/front/rev
+
+# file
+/favicon.ico
+/index.php
