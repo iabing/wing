@@ -1,1 +1,1 @@
-<?php redirect('/mall'); ?>
+<?php redirect('/service'); ?>

@@ -2,8 +2,6 @@
 
 .m-header { position: fixed; top: 0; left: 0; z-index: 9; }
 
-.m-header-title { margin: 0; }
-
 .m-page { padding: 50px 0; }
 
 .m-footer { position: fixed; bottom:0; left: 0; z-index: 9; }

@@ -2,7 +2,7 @@
 class Service extends Control {
 
   function _() {
-    redirect('/service/index');
+    load_template('/service/index');
   }
 
   function diy_computer() {

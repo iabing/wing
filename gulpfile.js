@@ -14,7 +14,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('clean', function() {
-  gulp.src(['static', 'wing/front/rev', 'wing/app/template'], {read:false})
+  gulp.src(['static', 'wing/app/template'], {read:false})
     .pipe(clean());
 });
 
@@ -22,30 +22,34 @@ gulp.task('rev', function() {
   gulp.src('wing/front/static/stylesheet/*')
     .pipe(rev())
     .pipe(rev.manifest())
-    .pipe(gulp.dest('wing/front/rev/stylesheet'));
+    .pipe(gulp.dest('static/rev/stylesheet'));
   gulp.src('wing/front/static/javascript/*')
     .pipe(rev())
     .pipe(rev.manifest())
-    .pipe(gulp.dest('wing/front/rev/javascript'));
+    .pipe(gulp.dest('static/rev/javascript'));
   gulp.src('wing/front/static/image/*')
     .pipe(rev())
     .pipe(rev.manifest())
-    .pipe(gulp.dest('wing/front/rev/image'));
+    .pipe(gulp.dest('static/rev/image'));
 });
 
 gulp.task('front', function() {
-  gulp.src(['wing/front/rev/**/*', 'wing/front/template/**/*'])
+  gulp.src(['static/rev/**/*', 'wing/front/template/**/*'])
     .pipe(collector())
     .pipe(html())
     .pipe(gulp.dest('wing/app/template'));
-  gulp.src(['wing/front/rev/**/*', 'wing/front/static/stylesheet/**/*'])
+  gulp.src(['static/rev/**/*', 'wing/front/static/stylesheet/**/*'])
     .pipe(collector())
     .pipe(css())
     .pipe(gulp.dest('static/stylesheet'));
-  gulp.src(['wing/front/rev/**/*', 'wing/front/static/javascript/**/*'])
+  gulp.src(['static/rev/**/*', 'wing/front/static/javascript/**/*'])
     .pipe(collector())
     .pipe(js())
     .pipe(gulp.dest('static/javascript'));
   gulp.src('wing/front/static/image/**/*')
     .pipe(gulp.dest('static/image'));
+});
+
+gulp.task('watch', function() {
+  gulp.watch('wing/front/**/*', ['rev', 'front']);
 });

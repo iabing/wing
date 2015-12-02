@@ -7,7 +7,6 @@ node_modules
 /static/
 /wing/app/cache/
 /wing/app/template/
-/wing/front/rev/
 
 # file
 /favicon.ico
