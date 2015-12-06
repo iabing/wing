@@ -1,0 +1,37 @@
+{
+  "menu": [
+    {
+      "type": 1,
+      "title": "首页",
+      "url": "/"
+    },
+    {
+      "type": 2,
+      "menu": [
+        "服务",
+        {
+          "title": "组装电脑",
+          "url": "/service/diy_computer"
+        },
+        {
+          "title": "软件服务",
+          "url": "/service/software_maintenance"
+        },
+        {
+          "title": "视频监控",
+          "url": "/service/video_surveillance"
+        }
+      ]
+    },
+    {
+      "type": 2,
+      "menu": [
+        "关于",
+        {
+          "title": "关于九号",
+          "url": "/about/team"
+        }
+      ]
+    }
+  ]
+}
