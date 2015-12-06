@@ -5,4 +5,8 @@ class About extends Control {
     load_template('about/index');
   }
 
+  function team() {
+    load_template('about/team');
+  }
+
 }
